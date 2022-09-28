@@ -6,27 +6,25 @@ class Wallet:
         self.money=money
 
     def credit(self,amount):
-        self.amount=amount
-        self.money=self.amount+self.money
+        
+        self.money=self.money+amount
         print(f"The total amount is:{self.money}")
 
     def debit(self,amount):
-        self.amount=amount
-        self.money=self.amount-self.money
+        
+        self.money=self.money-amount
         print(f"The total amount is:{self.money}")
 
 wallet = Wallet(6)
 wallet = Wallet()  # This should default money inside the wallet to 0
-print(wallet)
+print(wallet.money)
+
 
 
 class Person:
     # Implement the code here
     def __init__(self,name,location,wallet,moveto):
-                self.name=name
-                self.location=location
-                self.walllet=wallet
-                self.moveto=moveto
+                 self.walllet=wallet
 
 
 person = Person("Moh", 5, 50)
